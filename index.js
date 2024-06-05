@@ -21,11 +21,11 @@ admin.initializeApp({
 });
 
 app.use(cors(
-  // {
-  //   origin:["http://localhost:3000", "https://blogify-server-mu.vercel.app"],
-  //   methods:["POST", "GET","PATCH","DELETE"],
-  //   credentials: true,
-  // }
+  {
+    origin:["http://localhost:3000", "https://blogify-server-mu.vercel.app"],
+    methods:["POST", "GET","PATCH","DELETE"],
+    credentials: true,
+  }
 ));
 
 app.use((req, res, next) => {
