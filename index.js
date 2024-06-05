@@ -6,7 +6,7 @@ const cors = require("cors");
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const admin = require('firebase-admin');
-const port = process.env.PORT;
+const port = process.env.PORT|| 3001;
 
 const uri = process.env.MONGO_URI;
 const secret = process.env.JWT_SECRET;
@@ -21,11 +21,11 @@ admin.initializeApp({
 });
 
 app.use(cors(
-  {
-    origin:["http://localhost:3000", "https://blogify-server-mu.vercel.app"],
-    methods:["POST", "GET","PATCH","DELETE"],
-    credentials: true,
-  }
+  // {
+  //   origin:["http://localhost:3000", "https://blogify-server-mu.vercel.app"],
+  //   methods:["POST", "GET","PATCH","DELETE"],
+  //   credentials: true,
+  // }
 ));
 
 app.use((req, res, next) => {
