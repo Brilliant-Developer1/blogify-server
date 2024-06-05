@@ -22,7 +22,7 @@ admin.initializeApp({
 
 app.use(cors(
   {
-    origin:["http://localhost:3000", "https://blogify-server-keb1.onrender.com"],
+    origin:[ "https://blogify-two-delta.vercel.app/" , "http://localhost:3000", "https://blogify-server-keb1.onrender.com","https://blogify-server-mu.vercel.app/"],
     methods:["POST", "GET","PATCH","DELETE"],
     credentials: true,
   }
